@@ -1,4 +1,8 @@
 class point():
     def __init__(self):
-        return None
-        
+        self.x
+        self.y
+
+    def coord(x,y):
+        pass
+    
