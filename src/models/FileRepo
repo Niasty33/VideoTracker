@@ -1,20 +1,18 @@
-import csv
-
+import point
 class FileRepo(object):
-    def ___init__(self,point=0):
-        self.point = point
+    def __init__(self,tab=[]):
+        self.tab = tab
 
-    def __str__(self):
-        return self.point
-
-    def export(self):
-        with open('/tests/points.csv') as f:
-            writer = csv.writer(f)
-            writer.writerow(self.point)
+    def export2CSV(self):
+        file = open('tests/points.csv','w')
+        for k in len(self.tab):
+            line = f"{self.tab[k].x} ; {self.tab[k].y}\n"
+            file.write(line)
+        file.close()
 
 
 if __name__ == "__main__":
-    point = [2,4]
-    f = FileRepo()
-    #print(f.export(point))
+    
+    f = FileRepo(colonne_x)
     print(f)
+    f.export2CSV()
