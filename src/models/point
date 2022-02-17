@@ -1,8 +1,19 @@
-class point():
-    def __init__(self):
-        self.x
-        self.y
 
-    def coord(x,y):
-        pass
+class Point():
+    def __init__(self,x = 0,y = 0):
+        self.x = x
+        self.y = y
+
+    def __get__x(self):
+        return self.x
+
+    def __get__y(self):
+        return self.y
     
+    def __str__(self):
+         return f"( {self.x} ; {self.y} )"
+
+if __name__ == "__main__":
+    p = Point(3,5)
+    print(p)
+

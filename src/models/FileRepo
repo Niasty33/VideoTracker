@@ -1,0 +1,20 @@
+import csv
+
+class FileRepo(object):
+    def ___init__(self,point=0):
+        self.point = point
+
+    def __str__(self):
+        return self.point
+
+    def export(self):
+        with open('/tests/points.csv') as f:
+            writer = csv.writer(f)
+            writer.writerow(self.point)
+
+
+if __name__ == "__main__":
+    point = [2,4]
+    f = FileRepo()
+    #print(f.export(point))
+    print(f)
