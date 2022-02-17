@@ -1,3 +1,4 @@
+import math
 
 class Point():
     def __init__(self,x = 0,y = 0):
@@ -13,7 +14,14 @@ class Point():
     def __str__(self):
          return f"( {self.x} ; {self.y} )"
 
+def distance(A, B):
+    dx = abs(A.x - B.x)
+    dy = abs(A.y - B.y)
+    return math.sqrt(dx**2 + dy**2)
+
 if __name__ == "__main__":
-    p = Point(3,5)
+    origin = Point()
+    p = Point(3,4)
     print(p)
+    print(distance(origin, p))
 
