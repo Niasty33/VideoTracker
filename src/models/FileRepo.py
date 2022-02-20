@@ -4,7 +4,7 @@ if __name__ == "__main__":
 class FileRepo(object):
     def __init__(self,tab=[]):
         self.tab = tab
-
+        
     def export2CSV(self):
         file = open('tests/points.csv','w')
         for k in range(len(self.tab)):
