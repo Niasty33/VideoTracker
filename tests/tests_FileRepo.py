@@ -1,5 +1,6 @@
 import unittest
 import filecmp
+import numpy as np
 import sys
 from pathlib import Path
 sys.path[0] = str(Path(sys.path[0]).parent)
@@ -20,7 +21,9 @@ class Test_FileRepo(unittest.TestCase):
         file = FileRepo.FileRepo(self.__tab)
         file.export2CSV()
         f = open('points.csv','r')
-        self.assertTrue(f is self.__temoin)
+        read_f = np.loadtxt(f, delimiter=";")
+        read_temoin = np.loadtxt(self.__temoin, delimiter=";")
+        self.assertTrue(read_f is read_temoin)
     #En exécutant ce programme, on constate que le fichier CSV correspond
 
 
