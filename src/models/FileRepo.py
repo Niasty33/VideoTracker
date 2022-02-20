@@ -1,4 +1,5 @@
-from point import *
+if __name__ == "__main__":
+    from point import *
 
 class FileRepo(object):
     def __init__(self,tab=[]):
