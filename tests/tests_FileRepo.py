@@ -14,7 +14,7 @@ class Test_FileRepo(unittest.TestCase):
     #Le fichiers lié 'points_attendus' sera notre témoin, 'points' le résultat du programme FileRepo
     def setUp(self, tab=[point.Point(5.3,3.6),point.Point(4.7,9.5),point.Point(15.2,3.3)]):
         self.__tab = tab
-        self.__temoin = open('points_attendus.csv','r')
+        #self.__temoin = open('points_attendus.csv','r')
     
     
     def test_fileCSV(self): 
@@ -22,11 +22,11 @@ class Test_FileRepo(unittest.TestCase):
         file.export2CSV()
         f = open('points.csv','r')
         read_f = np.loadtxt(f, delimiter=";")
+        print(read_f)
         read_temoin = np.loadtxt(self.__temoin, delimiter=";")
         self.assertTrue(read_f is read_temoin)
     #En exécutant ce programme, on constate que le fichier CSV correspond
 
-
 if __name__ == '__main__':
-    tab = [point.Point(5.3,3.6),point.Point(4.7,9.5),point.Point(15.2,3.3)]
+    #tab = [point.Point(5.3,3.6),point.Point(4.7,9.5),point.Point(15.2,3.3)]
     unittest.main(verbosity=2)
