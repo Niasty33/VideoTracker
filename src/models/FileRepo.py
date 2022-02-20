@@ -1,12 +1,12 @@
 if __name__ == "__main__":
-    from point import *
+    import point
 
 class FileRepo(object):
     def __init__(self,tab=[]):
         self.tab = tab
 
     def export2CSV(self):
-        file = open('tests/points.csv','w')
+        file = open('../tests/points.csv','w')
         for k in range(len(self.tab)):
             line = f"{self.tab[k].x} ; {self.tab[k].y}\n"
             file.write(line)
@@ -14,6 +14,6 @@ class FileRepo(object):
 
 
 if __name__ == "__main__":
-    t = randomPoints(8)
+    t = point.randomPoints(8)
     f = FileRepo(t)
     f.export2CSV()
