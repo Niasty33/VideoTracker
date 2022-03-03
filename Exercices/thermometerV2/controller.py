@@ -6,7 +6,8 @@ class Controller:
         self.__view = view
         self.__model = model
         self.__CELSIUS = "°C"
-        self.__FARENHEIT = "°F"
+        self.__FAHRENHEIT = "°F"
+        self.__KELVIN = "°K"
 
         #Binding
         self.__view.update(str(self.__model.getTemperature()) + self.__CELSIUS)
@@ -23,19 +24,37 @@ class Controller:
         self.__view.update(str(self.__model.getTemperature()) + self.getUnit())
 
     def decrease(self) -> None:
+
         self.__model.decrease()
         self.__view.update(str(self.__model.getTemperature()) + self.getUnit())
 
-    def farenheit(self) -> None:
+    def fahrenheit(self) -> None:
 
         if self.getUnit() == self.__CELSIUS:
-            self.__model.farenheit()
-            self.__view.update(str(self.__model.getTemperature()) + self.__FARENHEIT)
+            self.__model.fahrenheit_from_celsius()
+            self.__view.update(str(self.__model.getTemperature()) + self.__FAHRENHEIT)
+        elif self.getUnit() == self.__KELVIN:
+            self.__model.fahrenheit_from_kelvin()
+            self.__view.update(str(self.__model.getTemperature()) + self.__FAHRENHEIT)
             
     def celsius(self):
-        if self.getUnit() == self.__FARENHEIT:
-            self.__model.celsius()
+
+        if self.getUnit() == self.__FAHRENHEIT:
+            self.__model.celsius_from_fahrenheit()
             self.__view.update(str(self.__model.getTemperature()) + self.__CELSIUS)
+        elif self.getUnit() == self.__KELVIN:
+            self.__model.celsius_from_kelvin()
+            self.__view.update(str(self.getTemperature()) + self.__CELSIUS)
+
+    def kelvin(self):
+
+        if self.getUnit() == self.__CELSIUS:
+            self.__model.kelvin_from_celsius()
+            self.__view.update(str(self.__model.getTemperature()) + self.__KELVIN)
+        elif self.getUnit() == self.__FAHRENHEIT:
+            self.__model.kelvin_from_fahrenheit()
+            self.__view.update(str(self.getTemperature()) + self.__KELVIN)
+            
 
     def getUnit(self) -> str:
         

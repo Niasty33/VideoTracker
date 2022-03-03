@@ -21,6 +21,9 @@ class View(Frame):
         self.farenheit_btn = Button(self.parent, text ='Farenheit', width = 10)
         self.farenheit_btn.pack(pady = 5)
 
+        self.kelvin_btn = Button(self.parent, text = 'Kelvin', width = 10)
+        self.kelvin_btn.pack(pady = 5)
+
     def update(self, text : str) -> None:
         
         self.temperature_lbl.config(text = text)
