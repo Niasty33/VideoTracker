@@ -12,7 +12,7 @@ class Application():
         Button(self.fenetre, text ='Increase', command = self.increase).pack(side=LEFT, padx=5, pady=5)
         Button(self.fenetre, text='Decrease', command = self.decrease).pack(side=RIGHT,padx=5, pady=5)
         Button(self.fenetre, text='Celsius', command = self.celsius).pack(side=TOP, padx=5, pady=5)
-        Button(self.fenetre, text='Farenheight', command = self.farenheight).pack(side=BOTTOM,padx=5, pady=5)
+        Button(self.fenetre, text='Fahrenheit', command = self.fahrenheit).pack(side=BOTTOM,padx=5, pady=5)
         self.fenetre.mainloop()
 
     def increase(self):
@@ -35,14 +35,14 @@ class Application():
             self.label.config(text = str(new_value) + unit)
 
     
-    def farenheight(self):
+    def fahrenheit(self):
         if self.label['text'][-1] == 'F':
             pass
         else:
             value = float(self.label['text'][:-2])
             unit = self.label['text'][-2:-1] + 'F'
-            faren = round((value* (9/5) + 32),2)
-            self.label.config(text=(str(faren)+unit))
+            fahren = round((value* (9/5) + 32),2)
+            self.label.config(text=(str(fahren)+unit))
 
 if __name__ == '__main__':
     app = Application()
