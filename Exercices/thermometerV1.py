@@ -16,19 +16,33 @@ class Application():
         self.fenetre.mainloop()
 
     def increase(self):
-        value = int(self.label['text'][:-2])
+        value = float(self.label['text'][:-2])
         unit = self.label['text'][-2:]
         self.label.config( text = str( value + 1 ) + unit)
     
     def decrease(self):
-        value = int(self.label['text'][:-2])
+        value = float(self.label['text'][:-2])
         unit = self.label['text'][-2:]
         self.label.config( text = str( value - 1 ) + unit)
 
     def celsius(self):
-        
+        if self.label['text'][-1] == 'C':
+            pass
+        else:
+            value = float(self.label['text'][:-2])
+            unit = self.label['text'][-2:-1] + 'C'
+            new_value = round((value - 32) * (5/9),2)
+            self.label.config(text = str(new_value) + unit)
+
     
-    def farenheight(se)
+    def farenheight(self):
+        if self.label['text'][-1] == 'F':
+            pass
+        else:
+            value = float(self.label['text'][:-2])
+            unit = self.label['text'][-2:-1] + 'F'
+            faren = round((value* (9/5) + 32),2)
+            self.label.config(text=(str(faren)+unit))
 
 if __name__ == '__main__':
     app = Application()
