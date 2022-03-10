@@ -1,0 +1,40 @@
+Cahier des charges Projet Technologique :
+
+Exigences :
+Enregistrement des donnes acquises lors du pointage dans un fichier au format csv :
+
+Création d’une matrice pour en suite mettre sur un fichier csv. Pas besoins d’importer quoi que ce soit :
+    • Bouton de sauvegarde pour sauvegarder les données en csv.
+    • Bouton ouvre un explorateur de fichier pour choisir emplacement de sauvegarde.
+    • Bouton nomé exporté en csv
+    • BONUS crée un système de stockage sur le même fichier sans écraser les données a toutes les sauvegardes 
+      
+
+Mise en place échelle pour l’utilisateur :
+    • clic droit = sélectionner un point 
+    • 2ᵉ clic droit ouverture d’une fenêtre avec zone ou on rentre la distance entre les deux points + (sélection d’une unité)
+    • stocker l’échelle dans une variable horizontale et verticale en même temps.
+    • distance pixels (vecteur)  —> longueur système international
+      
+              
+
+Conceptions et Taches :
+Décomposition de matrice et donnés lors du pointage. 
+    • Créer une fenêtre 
+    • créer un bouton 
+    • lien vers l’explorateur de fichiers 
+    • recupperer les donnés du fichier csv
+
+Mise en place de l’echelle :
+    • sauvegarder les coord. Du point ou a ete la souris 
+    • enregistrer le clic droit et ouvrir une fenetre suite au deuxieme
+        ◦ input de l’utiliateur pour determiner l’echelle 
+        ◦ variables horizontales et verticale pour determiner la distance entre les deux points
+        ◦ fonction de conversion des coordonnées 
+        ◦ ecrire une fonction de changement d’origine 
+        ◦ fixer une origine 
+
+
+
+
+
