@@ -34,7 +34,10 @@ Mise en place de l’echelle :
         ◦ ecrire une fonction de changement d’origine 
         ◦ fixer une origine 
 
-
-
+IMH-VideoTracker:
+    - ouvrir fenetre
+    - 
+    - jouer une video dans la fenetre 
+    - avoir un espace pour un menu 
 
 
