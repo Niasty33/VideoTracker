@@ -1,6 +1,5 @@
 import tkinter as tk
 import PIL.Image, PIL.ImageTk
-from tkinter import ttk
 
 class View(tk.Frame):
 
