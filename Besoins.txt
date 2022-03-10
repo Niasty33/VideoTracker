@@ -34,10 +34,22 @@ Mise en place de l’echelle :
         ◦ ecrire une fonction de changement d’origine 
         ◦ fixer une origine 
 
-IMH-VideoTracker:
+IHM-VideoTracker:
     - ouvrir fenetre
+    - partager la fenêtre pour avoir * la barre de menu à gauche
+                                     * la page principale (video) au milieu
+                                     * la barre de gestion de la video en bas
+                                     * l'onglet pour mettre le tableau de données à droite
+    - barre de menu : * menu fichiers: _charger une video
+                                       _lire une video
+                                       _quitter
+                      * menu view: _affichage des différents graphiques y(x), x(t), y(t)
+    - barre de gestion de la video: * bouton lecture
+                                    * bouton avancer/reculer d'une image
+                                    * bouton aller première/dernière image
+    - fonction qui attend un clic droit dans la fenêtre vidéo pour l'échelle, puis un deuxième
+           ouvre une fenêtre au deuxième avec barre de saisie de l'échelle
     - 
-    - jouer une video dans la fenetre 
-    - avoir un espace pour un menu 
+    
 
 
