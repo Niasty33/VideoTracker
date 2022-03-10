@@ -1,6 +1,6 @@
 import tkinter as tk
 
-class Controllers:
+class Controller:
 
     def __init__(self, video, view):
         

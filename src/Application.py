@@ -1,6 +1,7 @@
-
 import tkinter as tk
-
+from models.video import Video 
+from views.views import View 
+from controllers.controllers import Controller 
 
 class Application(tk.Tk):
 
