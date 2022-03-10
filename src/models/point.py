@@ -3,21 +3,21 @@ from random import random
 
 class Point:
     def __init__(self,x = 0,y = 0):
-        self.x = x
-        self.y = y
+        self.__x = x
+        self.__y = y
 
     def __get__x(self):
-        return self.x
+        return self.__x
 
     def __get__y(self):
-        return self.y
+        return self.__y
     
     def __str__(self):
-         return f"( {self.x} ; {self.y} )"
+         return f"( {self.__x} ; {self.__y} )"
 
 def distance(A, B):
-    dx = abs(A.x - B.x)
-    dy = abs(A.y - B.y)
+    dx = abs(A.__x - B.__x)
+    dy = abs(A.__y - B.__y)
     return math.sqrt(dx**2 + dy**2)
 
 def randomPoints(n:int):
