@@ -44,12 +44,17 @@ IHM-VideoTracker:
                                        _lire une video
                                        _quitter
                       * menu view: _affichage des différents graphiques y(x), x(t), y(t)
+                      * bouton repère: _clic droit dans la fenêtre vidéo pour l'échelle, puis un deuxième
+                                        ouvre une fenêtre au deuxième avec barre de saisie de l'échelle et un bouton "ok"
+                                       _fonction qui attend un clic gauche pour l'origine du repère
+                      * bouton qui permet d'entrer en mode "prise de position de l'objet"
+                                       _à chaque clic gauche, on note la position dans le tableau + on avance d'une image
+                                       _à la dernière image, ferme automatiquement ce mode
+                                       _ fonction qui attend la touche echap pour sortir du mode
     - barre de gestion de la video: * bouton lecture
                                     * bouton avancer/reculer d'une image
-                                    * bouton aller première/dernière image
-    - fonction qui attend un clic droit dans la fenêtre vidéo pour l'échelle, puis un deuxième
-           ouvre une fenêtre au deuxième avec barre de saisie de l'échelle
-    - 
+                                    * bouton aller première/dernière image                           
+    - bouton convertir en csv dans l'onglet du tableau
     
 
 
