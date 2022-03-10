@@ -3,7 +3,7 @@ import filecmp
 import numpy as np
 import sys
 from pathlib import Path
-sys.path[0] = str(Path(sys.path[0]).parent)
+#sys.path[0] = str(Path(sys.path[0]).parent)
 from src.models import point
 from src.models import FileRepo
 
